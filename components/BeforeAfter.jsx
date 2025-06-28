@@ -8,116 +8,32 @@ import arrow from "../public/st-images/arrowhead.jpg";
 export default function BeforeAfter({ project_id, niche }) {
   console.log("project_id in before after", project_id);
 
-  const chimeny = [
+  const HVAC = [
     {
-      before: "/st-images/beforeafter/chimeny/before1.webp",
+      before: "/st-images/beforeafter/hvac/before1.webp",
       before_alt: "before",
-      after: "/st-images/beforeafter/chimeny/after1.webp",
+      after: "/st-images/beforeafter/hvac/after1.webp",
       after_alt: "after",
     },
     {
-      before: "/st-images/beforeafter/chimeny/before2.webp",
+      before: "/st-images/beforeafter/hvac/before2.webp",
       before_alt: "before",
-      after: "/st-images/beforeafter/chimeny/after2.webp",
+      after: "/st-images/beforeafter/hvac/after2.webp",
       after_alt: "after",
     },
     {
-      before: "/st-images/beforeafter/chimeny/before3.webp",
+      before: "/st-images/beforeafter/hvac/before3.webp",
       before_alt: "before",
-      after: "/st-images/beforeafter/chimeny/after3.webp",
+      after: "/st-images/beforeafter/hvac/after3.webp",
       after_alt: "after",
     },
     {
-      before: "/st-images/beforeafter/chimeny/before4.webp",
+      before: "/st-images/beforeafter/hvac/before4.webp",
       before_alt: "before",
-      after: "/st-images/beforeafter/chimeny/after4.webp",
-      after_alt: "after",
-    },
-  ];
-  const airduct = [
-    {
-      before: "/st-images/beforeafter/airduct/before1.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/airduct/after1.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/airduct/before2.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/airduct/after2.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/airduct/before3.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/airduct/after3.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/airduct/before4.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/airduct/after4.webp",
+      after: "/st-images/beforeafter/hvac/after4.webp",
       after_alt: "after",
     },
   ];
-  const dryervent = [
-    {
-      before: "/st-images/beforeafter/dryervent/before1.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/dryervent/after1.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/dryervent/before2.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/dryervent/after2.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/dryervent/before3.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/dryervent/after3.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/dryervent/before4.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/dryervent/after4.webp",
-      after_alt: "after",
-    },
-  ];
-  const carpet = [
-    {
-      before: "/st-images/beforeafter/carpet/before1.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/carpet/after1.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/carpet/before2.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/carpet/after2.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/carpet/before3.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/carpet/after3.webp",
-      after_alt: "after",
-    },
-    {
-      before: "/st-images/beforeafter/carpet/before4.webp",
-      before_alt: "before",
-      after: "/st-images/beforeafter/carpet/after4.webp",
-      after_alt: "after",
-    },
-  ];
-
-  let selectedImage = carpet;
-  if (niche === "Chimney Cleaning") selectedImage = chimeny;
-  else if (niche === "Air Conditioning") selectedImage = airduct;
-  else if (niche === "Dryervent Cleaning") selectedImage = dryervent;
-  else if (niche === "Carpet Cleaning") selectedImage = carpet;
 
   return (
     <FullContainer>
@@ -126,7 +42,7 @@ export default function BeforeAfter({ project_id, niche }) {
           Before And After Results
         </h2>
         <div className="hidden md:grid grid-cols-2 md:grid-cols-4 gap-5">
-          {selectedImage.map((item, index) => (
+          {HVAC.map((item, index) => (
             <BeforeAfterSlider
               key={index}
               beforeImage={item.before}
@@ -137,7 +53,7 @@ export default function BeforeAfter({ project_id, niche }) {
           ))}
         </div>
         <div className="md:hidden grid grid-cols-2 md:grid-cols-4 gap-5">
-          {selectedImage.slice(0, 2).map((item, index) => (
+          {HVAC.slice(0, 2).map((item, index) => (
             <BeforeAfterSlider
               key={index}
               beforeImage={item.before}

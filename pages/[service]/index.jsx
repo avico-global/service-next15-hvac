@@ -355,7 +355,7 @@ export async function getServerSideProps({ req, params }) {
       service_description2: service_description2?.data[0] || null,
       city_name: city_name?.data[0]?.value || null,
       form_head: form_head?.data[0]?.value || null,
-      phone: project?.phone || null,
+      phone: project?.phone || "(000) 000-0000",
     },
   };
 }
