@@ -194,7 +194,7 @@ export async function getServerSideProps({ req }) {
       gtmId: gtmId?.data[0]?.value || null,
       contact_info: contact_info?.data[0]?.value || null,
       city_name: city_name?.data[0]?.value || null,
-      phone: project?.phone || null,
+      phone: project?.phone || "(000) 000-0000",
     },
   };
 }
